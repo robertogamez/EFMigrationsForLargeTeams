@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="CinteraContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sighting.cs" />
     <Compile Include="Vehicle.cs" />
