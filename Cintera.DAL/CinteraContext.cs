@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Cintera.DAL
 {
@@ -8,6 +9,15 @@ namespace Cintera.DAL
             : base("CinteraContext")
         {
 
+        }
+
+        public DbSet<Case> Cases { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
