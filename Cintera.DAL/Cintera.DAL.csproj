@@ -51,9 +51,19 @@
   <ItemGroup>
     <Compile Include="Case.cs" />
     <Compile Include="CinteraContext.cs" />
+    <Compile Include="DnaSample.cs" />
+    <Compile Include="DnaSampleStatusEnum.cs" />
     <Compile Include="Migrations\201811051423251_AddedVehicle.cs" />
     <Compile Include="Migrations\201811051423251_AddedVehicle.Designer.cs">
       <DependentUpon>201811051423251_AddedVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811072322119_AddedDnaSample.cs" />
+    <Compile Include="Migrations\201811072322119_AddedDnaSample.Designer.cs">
+      <DependentUpon>201811072322119_AddedDnaSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811072327071_AddedDnaSampleStatus.cs" />
+    <Compile Include="Migrations\201811072327071_AddedDnaSampleStatus.Designer.cs">
+      <DependentUpon>201811072327071_AddedDnaSampleStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +77,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811051423251_AddedVehicle.resx">
       <DependentUpon>201811051423251_AddedVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811072322119_AddedDnaSample.resx">
+      <DependentUpon>201811072322119_AddedDnaSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811072327071_AddedDnaSampleStatus.resx">
+      <DependentUpon>201811072327071_AddedDnaSampleStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
