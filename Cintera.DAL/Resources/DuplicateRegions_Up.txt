@@ -1,0 +1,20 @@
+SELECT r.RegionId, r.ParentId, r.Name, r.Discriminator
+INTO InvalidParentName
+FROM Region r
+JOIN (
+  SELECT ParentId, Name
+  FROM Region
+  GROUP BY ParentId, Name
+  HAVING COUNT(*) > 1) bad
+ON  r.ParentId = bad.ParentId
+AND r.Name = bad.Name
+
+DELETE r
+FROM Region r
+JOIN (
+  SELECT ParentId, Name
+  FROM Region
+  GROUP BY ParentId, Name
+  HAVING COUNT(*) > 1) bad
+ON  r.ParentId = bad.ParentId
+AND r.Name = bad.Name

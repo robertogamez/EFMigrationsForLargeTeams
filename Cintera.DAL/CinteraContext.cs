@@ -29,10 +29,33 @@ namespace Cintera.DAL
                 .IsRequired()
                 .HasMaxLength(10);
 
+            modelBuilder.Entity<DnaLab>()
+                .Property(x => x.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            modelBuilder.Entity<Region>()
+                .Property(x => x.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+            modelBuilder.Entity<Region>()
+                .HasOptional(x => x.Parent)
+                .WithMany()
+                .HasForeignKey(x => x.ParentId);
+
+            modelBuilder.Entity<AncestorRegion>()
+                .ToTable("V_AncestorRegion")
+                .HasKey(x => new { x.RegionId, x.AncestorRegionId });
+            modelBuilder.Entity<AncestorRegion>()
+                .HasRequired(x => x.AncestorRegionRef)
+                .WithMany()
+                .HasForeignKey(x => x.AncestorRegionId);
+
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Case> Cases { get; set; }
         public DbSet<DnaSample> DnaSamples { get; set; }
+        public DbSet<DnaSampleStatus> DnaSampleStatus { get; set; }
     }
 }

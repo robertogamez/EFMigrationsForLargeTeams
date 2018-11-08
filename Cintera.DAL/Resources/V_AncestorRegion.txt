@@ -1,0 +1,13 @@
+create view V_AncestorRegion
+as
+with r as (
+  select RegionId, RegionId as AncestorRegionId, ParentId
+  from Region
+
+  union all
+
+  select r.RegionId, p.RegionId as AncestorRegionId, p.ParentId
+  from r join Region p on r.ParentId = p.RegionId
+)
+select RegionId, AncestorRegionId
+from r

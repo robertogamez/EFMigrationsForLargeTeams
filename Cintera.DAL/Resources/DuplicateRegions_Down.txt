@@ -1,0 +1,10 @@
+SET IDENTITY_INSERT Region ON
+
+INSERT INTO Region
+  (RegionId, ParentId, Name, Discriminator)
+SELECT RegionId, ParentId, Name, Discriminator
+FROM InvalidParentName
+
+SET IDENTITY_INSERT Region OFF
+
+DROP TABLE InvalidParentName

@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AncestorRegion.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="CinteraContext.cs" />
+    <Compile Include="DnaLab.cs" />
     <Compile Include="DnaSample.cs" />
     <Compile Include="DnaSampleStatusEnum.cs" />
     <Compile Include="Migrations\201811051423251_AddedVehicle.cs" />
@@ -65,8 +67,30 @@
     <Compile Include="Migrations\201811072327071_AddedDnaSampleStatus.Designer.cs">
       <DependentUpon>201811072327071_AddedDnaSampleStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811081704197_AddedDnaLab.cs" />
+    <Compile Include="Migrations\201811081704197_AddedDnaLab.Designer.cs">
+      <DependentUpon>201811081704197_AddedDnaLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811081707363_SeededDnaLabs.cs" />
+    <Compile Include="Migrations\201811081707363_SeededDnaLabs.Designer.cs">
+      <DependentUpon>201811081707363_SeededDnaLabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811081735551_AddedRegion.cs" />
+    <Compile Include="Migrations\201811081735551_AddedRegion.Designer.cs">
+      <DependentUpon>201811081735551_AddedRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811081741253_SeededRegions.cs" />
+    <Compile Include="Migrations\201811081741253_SeededRegions.Designer.cs">
+      <DependentUpon>201811081741253_SeededRegions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811081808072_AddedAncestorMigration.cs" />
+    <Compile Include="Migrations\201811081808072_AddedAncestorMigration.Designer.cs">
+      <DependentUpon>201811081808072_AddedAncestorMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Scripts.Designer.cs" />
     <Compile Include="Sighting.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
@@ -84,6 +108,30 @@
     <EmbeddedResource Include="Migrations\201811072327071_AddedDnaSampleStatus.resx">
       <DependentUpon>201811072327071_AddedDnaSampleStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081704197_AddedDnaLab.resx">
+      <DependentUpon>201811081704197_AddedDnaLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081707363_SeededDnaLabs.resx">
+      <DependentUpon>201811081707363_SeededDnaLabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081735551_AddedRegion.resx">
+      <DependentUpon>201811081735551_AddedRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081741253_SeededRegions.resx">
+      <DependentUpon>201811081741253_SeededRegions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081808072_AddedAncestorMigration.resx">
+      <DependentUpon>201811081808072_AddedAncestorMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\CountryByState.txt" />
+    <Content Include="Resources\DuplicateRegions_Down.txt" />
+    <Content Include="Resources\DuplicateRegions_Up.txt" />
+    <Content Include="Resources\InsertRegions.txt" />
+    <Content Include="Resources\V_AncestorRegion.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
