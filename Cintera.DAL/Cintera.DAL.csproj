@@ -87,6 +87,14 @@
     <Compile Include="Migrations\201811081808072_AddedAncestorMigration.Designer.cs">
       <DependentUpon>201811081808072_AddedAncestorMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811091743475_RenameSnaSampleIdColumn.cs" />
+    <Compile Include="Migrations\201811091743475_RenameSnaSampleIdColumn.Designer.cs">
+      <DependentUpon>201811091743475_RenameSnaSampleIdColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091748311_RenameCaseToInvestigation.cs" />
+    <Compile Include="Migrations\201811091748311_RenameCaseToInvestigation.Designer.cs">
+      <DependentUpon>201811091748311_RenameCaseToInvestigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Region.cs" />
@@ -122,6 +130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811081808072_AddedAncestorMigration.resx">
       <DependentUpon>201811081808072_AddedAncestorMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091743475_RenameSnaSampleIdColumn.resx">
+      <DependentUpon>201811091743475_RenameSnaSampleIdColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091748311_RenameCaseToInvestigation.resx">
+      <DependentUpon>201811091748311_RenameCaseToInvestigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scripts.resx" />
   </ItemGroup>

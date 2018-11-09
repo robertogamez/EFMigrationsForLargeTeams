@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Cintera.DAL
 {
-    public class Case
+    public class Investigation
     {
-        public int CaseId { get; set; }
+        public int InvestigationId { get; set; }
 
         public virtual ICollection<Vehicle> Vehicles { get; set; }
     }

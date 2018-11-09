@@ -54,7 +54,7 @@ namespace Cintera.DAL
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Case> Cases { get; set; }
+        public DbSet<Investigation> Cases { get; set; }
         public DbSet<DnaSample> DnaSamples { get; set; }
         public DbSet<DnaSampleStatus> DnaSampleStatus { get; set; }
     }

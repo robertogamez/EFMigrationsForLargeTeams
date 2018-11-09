@@ -2,7 +2,7 @@
 {
     public class DnaSample
     {
-        public int Id { get; set; }
+        public int DnaSampleId { get; set; }
         public DnaSampleStatusEnum SampleStatusId { get; set; }
         public virtual DnaSampleStatus SampleStatus { get; set; }
 
